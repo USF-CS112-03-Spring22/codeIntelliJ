@@ -1,4 +1,4 @@
-package lecture28GUI;
+package lecture28GUIInnerClasses;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -7,8 +7,8 @@ import javax.swing.*;
 public class SimpleCalculator extends JPanel {
 
 	private JButton additionButton;
-	JTextField num1Box;
-	JTextField num2Box;
+	private JTextField num1Box;
+	private JTextField num2Box;
 
 	private JLabel result;
 
@@ -47,9 +47,11 @@ public class SimpleCalculator extends JPanel {
 		public void actionPerformed(ActionEvent event) {
 			// get two numbers, convert them to integers, take the sum and update the label result
 			// so that it shows the sum of two integers
-			System.out.println("Button pressed!");
-			int add = Integer.parseInt(num1Box.getText()) + Integer.parseInt(num2Box.getText());
-			result.setText("Result: " + add);
+			if (event.getSource() == additionButton) {
+				System.out.println("Add Button pressed!");
+				int add = Integer.parseInt(num1Box.getText()) + Integer.parseInt(num2Box.getText());
+				result.setText("Result: " + add);
+			}
 
 		}
 	}
@@ -58,7 +60,7 @@ public class SimpleCalculator extends JPanel {
 		JFrame frame = new JFrame("Push Counter");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		frame.getContentPane().add(new SimpleCalculator());
+		frame.add(new SimpleCalculator());
 		frame.setPreferredSize(new Dimension(300, 70));
 
 		frame.pack(); //size it so that dimensions are close to preferred size

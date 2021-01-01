@@ -1,4 +1,4 @@
-package lecture28GUI;
+package lecture28GUIInnerClasses;
 //********************************************************************
 //  LeftRightPanel.java       Authors: Lewis/Loftus
 //

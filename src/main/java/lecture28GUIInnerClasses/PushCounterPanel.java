@@ -1,4 +1,4 @@
-package lecture28GUI;
+package lecture28GUIInnerClasses;
 //********************************************************************
 //  PushCounterPanel.java       Authors: Lewis/Loftus
 //
@@ -9,6 +9,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// The class PushCounterPanel is a child of JPanel.
+// Has a button and a label
 public class PushCounterPanel extends JPanel {
 
 	private JButton pushButton;
@@ -24,7 +26,7 @@ public class PushCounterPanel extends JPanel {
 		// create a button
 		pushButton = new JButton("Push Me!");
 		// add the button to the panel
-		add(pushButton);
+		add(pushButton); // calling the add method from JPanel
 		// create a text label
 		label = new JLabel("Pushes: " + count);
 		add(label);

@@ -1,4 +1,4 @@
-package lecture28GUI;
+package lecture28GUIInnerClasses;
 
 import java.awt.*;
 import javax.swing.*;
@@ -7,11 +7,11 @@ public class SimpleFrameWithPanelExample {
 	public static void main(String[] args) {
 		JFrame fr = new JFrame("Welcome window");
 		fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		fr.setPreferredSize(new Dimension(500, 500));
+		fr.setPreferredSize(new Dimension(500, 100));
 		
 		// Add a JPanel to the frame, in blue color
 		JPanel panel = new JPanel();
-		//panel.setBackground(Color.blue);
+		// panel.setBackground(Color.blue);
 
 		// Create a button
 		JButton button = new JButton("Enter"); // does nothing in this example!
@@ -24,8 +24,10 @@ public class SimpleFrameWithPanelExample {
 		panel.add(label);
 		panel.add(txtF);
 		panel.add(button);
+		// Note: nothing will happen when you press the button, since we don't have
+		// an action listener attached to the button
 
-		fr.getContentPane().add(panel);
+		fr.add(panel);
 
 		fr.pack();
 		fr.setVisible(true);

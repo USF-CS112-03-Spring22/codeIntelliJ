@@ -1,4 +1,4 @@
-package lecture28GUI;
+package lecture28GUIInnerClasses;
 
 import java.awt.*;
 import javax.swing.*;

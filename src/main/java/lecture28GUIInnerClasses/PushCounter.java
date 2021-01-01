@@ -1,4 +1,4 @@
-package lecture28GUI;
+package lecture28GUIInnerClasses;
 //********************************************************************
 //  PushCounter.java       Authors: Lewis/Loftus
 //
@@ -17,7 +17,7 @@ public class PushCounter {
 		JFrame frame = new JFrame("Push Counter");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		frame.getContentPane().add(new PushCounterPanel());
+		frame.add(new PushCounterPanel());
 		frame.setPreferredSize(new Dimension(300, 70));
 		
 		frame.pack(); //size it so that dimensions are close to preferred size
