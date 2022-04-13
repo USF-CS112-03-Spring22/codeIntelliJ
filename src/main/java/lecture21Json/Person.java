@@ -15,11 +15,10 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person {" +
+        return "Person: " +
                 "name='" + name + '\'' +
                 ", id=" + id +
                 ", title='" + title + '\'' +
-                ", address=" + address +
-                '}';
+                ", address=" + address;
     }
 }

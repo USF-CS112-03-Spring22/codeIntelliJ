@@ -32,12 +32,11 @@ public class Fruit {
      */
     @Override
     public String toString() {
-        return "Fruit{" +
+        return "Fruit: " + System.lineSeparator() +
                 "name='" + name + '\'' +
                 ", color='" + color + '\'' +
                 //", price=" + price +
-                ", organic=" + isOrganic +
-                '}';
+                ", organic=" + isOrganic;
     }
 
     // Getters

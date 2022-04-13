@@ -15,11 +15,10 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
+        return "Address: " + System.lineSeparator() +
                 "state='" + state + '\'' +
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
-                ", number=" + number +
-                '}';
+                ", number=" + number;
     }
 }
