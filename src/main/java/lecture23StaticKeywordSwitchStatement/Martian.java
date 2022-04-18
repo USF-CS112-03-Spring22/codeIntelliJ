@@ -12,7 +12,11 @@ public class Martian {
 	public String getName() {
 		return name;
 	}
-	
+
+	public static int getNumMartians() {
+		return numMartians;
+	}
+
 	public void dealWithEnemy() {
 		System.out.print("My name is " + name + ". ");
 		if (numMartians < 3) {
