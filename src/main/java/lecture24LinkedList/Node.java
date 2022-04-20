@@ -2,7 +2,7 @@ package lecture24LinkedList;
 
 /** Represents a single node in a linked list */
 public class Node {
-	private int elem; // value stored at the node
+	private int elem; // data (value) stored at the node
 	private Node next; // reference to the next node
 
 	public Node(int elem) {
