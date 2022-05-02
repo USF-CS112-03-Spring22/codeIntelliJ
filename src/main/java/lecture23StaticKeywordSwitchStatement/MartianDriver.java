@@ -2,6 +2,8 @@ package lecture23StaticKeywordSwitchStatement;
 
 public class MartianDriver {
     public static void main(String[] args) {
+        //System.out.println(Martian.getNumMartians());
+
         Martian m1 = new Martian("A");
         m1.dealWithEnemy();
         Martian m2 = new Martian("B");
@@ -10,5 +12,8 @@ public class MartianDriver {
         m3.dealWithEnemy();
         Martian m4 = new Martian("D");
         m4.dealWithEnemy();
+        //System.out.println(Martian.getNumMartians());
+
+
     }
 }

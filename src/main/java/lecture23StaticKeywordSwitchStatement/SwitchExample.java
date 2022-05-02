@@ -21,6 +21,7 @@ public class SwitchExample {
                 System.out.println("The month is " + month);
                 break;
         }
+        System.out.println("Done");
 
     }
 }

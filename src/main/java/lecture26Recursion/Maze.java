@@ -10,7 +10,7 @@ public class Maze
    private final int TRIED = 3;
    private final int PATH = 7;
 
-   private int[][] grid = { {1,1,1,0,1,1,0,0,0,1,1,1,1},
+   private int[][] grid1 = { {1,1,1,0,1,1,0,0,0,1,1,1,1},
                             {1,0,1,1,1,0,1,1,1,1,0,0,1},
                             {0,0,0,0,1,0,1,0,1,0,1,0,0},
                             {1,1,1,0,1,1,1,0,1,0,1,1,1},
@@ -19,6 +19,10 @@ public class Maze
                             {1,0,0,0,0,0,0,0,0,0,0,0,0},
                             {1,1,1,1,1,1,1,1,1,1,1,1,1} };
 
+   private int[][] grid =  { {1,1,1,0},
+                             {0,0,1,0},
+                             {0,0,1,1},
+                             {1,0,1,1}}; // another grid to test on
    //-----------------------------------------------------------------
    //  Attempts to recursively traverse the maze. Inserts special
    //  characters indicating locations that have been tried and that
@@ -27,7 +31,9 @@ public class Maze
    public boolean traverse (int row, int column)
    {
       boolean done = false;
-      
+      if ( row == 1 && column == 0) {
+         System.out.println("At 1, 0");
+      }
       if (valid (row, column))
       {
          grid[row][column] = TRIED;  // this cell has been tried
@@ -39,8 +45,9 @@ public class Maze
             done = traverse (row+1, column);     // down
             if (!done)
                done = traverse (row, column+1);  // right
-            if (!done)
-               done = traverse (row-1, column);  // up
+            if (!done) {
+               done = traverse(row - 1, column);  // up
+            }
             if (!done)
                done = traverse (row, column-1);  // left
          }

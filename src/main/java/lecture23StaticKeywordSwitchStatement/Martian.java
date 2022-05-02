@@ -17,6 +17,7 @@ public class Martian {
 		return numMartians;
 	}
 
+
 	public void dealWithEnemy() {
 		System.out.print("My name is " + name + ". ");
 		if (numMartians < 3) {

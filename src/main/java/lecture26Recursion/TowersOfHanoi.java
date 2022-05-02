@@ -34,23 +34,13 @@ public class TowersOfHanoi
     //-----------------------------------------------------------------
     private void moveTower (int numDisks, int start, int end, int temp)
     {
-        if (numDisks == 1)
-            moveOneDisk (start, end);
+        if (numDisks == 1) // base case
+            System.out.println ("Move one disk from " + start + " to " + end);
         else
         {
             moveTower (numDisks-1, start, temp, end);
-            moveOneDisk (start, end);
+            System.out.println ("Move one disk from " + start + " to " + end);
             moveTower (numDisks-1, temp, end, start);
         }
-    }
-
-    //-----------------------------------------------------------------
-    //  Prints instructions to move one disk from the specified start
-    //  tower to the specified end tower.
-    //-----------------------------------------------------------------
-    private void moveOneDisk (int start, int end)
-    {
-        System.out.println ("Move one disk from " + start + " to " +
-                end);
     }
 }

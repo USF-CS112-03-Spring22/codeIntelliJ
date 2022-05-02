@@ -21,7 +21,7 @@ public class RecursionExamples {
      * @return factorial of n
      */
     public static long factorial(int n) {
-        if (n <= 1) // base case
+        if (n <= 0) // base case
             return 1;
 
         else // recursive case
@@ -121,10 +121,10 @@ public class RecursionExamples {
         //long res = factorial(4);
         //System.out.println(res);
 
-       // System.out.println(pow(3, 2));
+          System.out.println(pow(3, 2));
        // System.out.println(pow(3, -1));
         //System.out.println(reverse("university"));
-        System.out.println(isPalindrome("Hannah"));
+        //System.out.println(isPalindrome("Hannah"));
     }
 
 }

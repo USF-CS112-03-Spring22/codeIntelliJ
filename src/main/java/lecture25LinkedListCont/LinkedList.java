@@ -118,6 +118,16 @@ public class LinkedList {
     public void findRemove(int elem) {
         // FILL IN CODE: Find and remove the element of the linked list equal to elem
         // Do nothing if such element does not exist
+        Node prev = null;
+        Node curr = head;
+
+        while (curr != null && curr.getElem() != elem) {
+            // TODO: update previous
+            curr = curr.getNext();
+        }
+        if (prev == null || curr == null)
+            return; // nothing to remove
+
 
     }
 
