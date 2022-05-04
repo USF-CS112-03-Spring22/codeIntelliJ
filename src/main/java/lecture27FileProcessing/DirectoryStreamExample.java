@@ -16,11 +16,11 @@ public class DirectoryStreamExample {
     public static void processFiles(String directory) {
 
         Path p = Paths.get(directory);
-        try (DirectoryStream<Path> filesList = Files.newDirectoryStream(p)) {
-            for (Path file : filesList) {
+        try (DirectoryStream<Path> pathsInDir = Files.newDirectoryStream(p)) {
+            for (Path path : pathsInDir) {
                 // print the name of each file in the directory
-                if (!Files.isDirectory(file) && (file.toString().endsWith(".java")))
-                    System.out.println(file);
+                if (!Files.isDirectory(path) && (path.toString().endsWith(".java")))
+                    System.out.println(path);
 
             }
         } catch (IOException e) {
